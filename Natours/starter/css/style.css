@@ -95,11 +95,16 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  /* Fixes shaky animation */
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
@@ -107,11 +112,42 @@ body {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
+
+  animation: moveInLeft 1s ease-out;
 }
 
 .heading-primary-sub {
   display: block;
   font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.74rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+
+  animation: moveInRight 1s ease-out;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  transition: all 0.2s;
+  border-radius: 10rem;
+  /* text-align: center; */
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  /* font-size: 2rem; */
+  /* color: #fff; */
+  background-color: #fff;
 }
