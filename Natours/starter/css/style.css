@@ -36,7 +36,7 @@ dark: #28b485
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
+    transform: translateY(5rem);
   }
   100% {
     opacity: 1;
@@ -133,7 +133,8 @@ body {
   display: inline-block;
   transition: all 0.2s;
   border-radius: 10rem;
-  /* text-align: center; */
+  color: #000;
+  position: relative;
 }
 
 .btn:hover {
@@ -147,7 +148,36 @@ body {
 }
 
 .btn-white {
-  /* font-size: 2rem; */
-  /* color: #fff; */
+  font-size: 1.5rem;
   background-color: #fff;
+}
+
+/* The button effect to appear on hover */
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* Transition */
+  transition: all 0.8s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  /* Scales up pseudo */
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.8s ease-out 0.1s;
+  animation-fill-mode: backwards;
 }
