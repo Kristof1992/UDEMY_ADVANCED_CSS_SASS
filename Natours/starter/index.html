@@ -109,6 +109,23 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
+
+              <!-- <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" alt="Photo 1"
+              sizes="(max-width: 900px) 17vw, (max-width: 600px) 26vw, 297px" 
+              class="composition__photo composition__photo--p1"
+              src="img/nat-1-large.jpg">
+
+              <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" alt="Photo 2"
+              sizes="(max-width: 900px) 17vw, (max-width: 600px) 26vw, 297px" 
+              class="composition__photo composition__photo--p2"
+              src="img/nat-2-large.jpg">
+
+              <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" alt="Photo 3"
+              sizes="(max-width: 900px) 17vw, (max-width: 600px) 26vw, 297px"
+              class="composition__photo composition__photo--p3"
+              src="img/nat-3-large.jpg"> -->
+
+               
               <img
                 src="img/nat-1-large.jpg"
                 alt="Photo 1"
@@ -120,8 +137,9 @@
               /><img
                 src="img/nat-3-large.jpg"
                 alt="Photo 3"
-                class="composition__photo composition__photo--p3"
+                class="composition__photo composition__photo--p3" 
               />
+             
             </div>
           </div>
         </div>
@@ -433,7 +451,19 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+        <!-- Art direction - It switches the image at the specified width in the media query.  -->
+        <picture class="footer__logo">
+          
+          <source srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width:37.5em)"
+          />
+          <!-- The srcset attribute allows the browser to set img according to the user's screen. -->
+          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" />
+
+        </picture>
       </div>
 
       <div class="row">
@@ -503,70 +533,13 @@
             inventore, blanditiis rem numquam. Consequuntur repellendus minima
             fugit! Consequuntur qui officia repellendus quam non perferendis.
             Consequuntur nulla accusantium cupiditate. Alias ipsa aliquam
-            inventore, blanditiis rem numquam. Consequuntur repellendus minima
-            fugit! Consequuntur qui officia repellendus quam non perferendis.
-            Consequuntur nulla accusantium cupiditate. Alias ipsa aliquam
-            inventore, blanditiis rem numquam. Consequuntur repellendus minima
-            fugit! Consequuntur qui officia repellendus quam non perferendis.
-            Consequuntur nulla accusantium cupiditate. Consequuntur repellendus
-            minima fugit! Consequuntur qui officia repellendus quam non
-            perferendis. Consequuntur nulla accusantium cupiditate. Consequuntur
-            repellendus minima fugit! Consequuntur qui officia repellendus quam
-            non perferendis. Consequuntur nulla accusantium cupiditate.
-            Consequuntur repellendus minima fugit! Consequuntur qui officia
-            repellendus quam non perferendis. Consequuntur nulla accusantium
-            cupiditate. Consequuntur repellendus minima fugit! Consequuntur qui
-            officia repellendus quam non perferendis. Consequuntur nulla
-            accusantium cupiditate.
+            inventore, blanditiis rem numquam.
           </p>
           <a href="#" class="btn btn--green">Book now</a>
         </div>
       </div>
     </div>
 
-    <!--
-    <section class="grid-test">
-      <div class="row">
-        <div class="col-1-of-2">Col 1 of 2</div>
-        <div class="col-1-of-2">Col 1 of 2</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-3">Col 1 of 3</div>
-        <div class="col-1-of-3">Col 1 of 3</div>
-        <div class="col-1-of-3">Col 1 of 3</div>
-      </div>
-
-      -->
-    <!-- <div class="row">
-      <div class="col-1-of-3">Col 1 of 3</div>
-      <div class="col-2-of-3">Col 2 of 3</div>
-    </div> -->
-
-    <!--  
-      <div class="row">
-        <div class="col-1-of-2">Col 1 of 2</div>
-        <div class="col-1-of-2">Col 1 of 2</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-2-of-4">Col 2 of 4</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-3-of-4">Col 3 of 4</div>
-      </div>
-    </section>
-    -->
+    
   </body>
 </html>
