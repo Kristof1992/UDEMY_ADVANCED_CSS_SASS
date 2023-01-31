@@ -69,16 +69,230 @@
 }
 
 /////////////////////////////////
+/// DROPDOWN MENU - PROFILE
+
+// .user-nav__user:hover .dropdown-menu {
+//   transform: scaleY(1);
+// }
+
+.user-nav__user:hover .dropdown-menu__item:hover .dropdown-menu__link {
+  color: white;
+  transition: 0.2s 0.3s;
+}
+
+.dropdown-menu {
+  transform: scaleY(0);
+  z-index: 99;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  list-style: none;
+  transform-origin: top;
+  transition: all 0.25s ease;
+
+  &__item {
+    position: relative;
+  }
+
+  &__item::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  &__item:hover::before {
+    background-color: var(--color-primary);
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  // ANCHORS
+  &__link:link,
+  &__link:visited {
+    // transition: all .1s;
+    font-family: inherit;
+    font-weight: 400;
+    color: black;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 1.8rem;
+  }
+
+  &__link:active:before {
+    background-color: var(--color-primary-light);
+  }
+
+  // ANCHOR ICON
+  &__icon {
+    z-index: 200;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  // ANCHOR TEXT
+  &__text {
+    z-index: 201;
+    font-size: 1.1rem;
+  }
+}
+
+/////////////////////////////////
+/// DROPDOWN MENU - MESSAGES
+
+.dropdown-menu--messages {
+  font-family: "Open Sans", sans-serif;
+  transform: scaleY(0);
+  list-style: none;
+
+  &__image-box {
+    &__image {
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__user {
+    &__box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__name {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: var(--color-grey-dark-1);
+    }
+
+    &__text {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: var(--color-grey-dark-2);
+    }
+
+    &__timestamp {
+      color: var(--color-grey-dark-3);
+      margin-left: auto;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.9rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-grey-light-4);
+    background-color: var(--color-grey-light-1);
+    color: black;
+  }
+
+  &__link:active {
+    color: black;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+  }
+
+  &__link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 97%;
+    width: 3px;
+    background-color: white;
+    // transform: scaleY(0);
+    // Cool property to use for animation it adjusts the animation direction starting point
+    // transform-origin: top;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  // Selects the first two list items of the dropdown and then selects
+  // the ::before pseudo element of the nested <a> and changes the color.
+  &__item:nth-child(-n + 2) &__link::before {
+    background-color: var(--color-primary);
+  }
+}
+
+.wrapper {
+  position: absolute;
+  background-color: var(--color-grey-light-1);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  z-index: 600;
+  height: 400%;
+  overflow-y: auto;
+
+  transform: scaleY(0);
+
+  box-shadow: var(--shadow-dark);
+
+  transform-origin: top;
+  transition: all 0.25s ease;
+}
+
+.user-nav__icon-box--messages:hover ~ .wrapper,
+.dropdown-menu--messages {
+  transform: scaleY(1);
+}
+
+.wrapper:hover,
+.dropdown-menu--messages__item:hover {
+  transform: scaleY(1);
+}
+
+// *** Making the dropdown work - Version 1  ***
+// Tackles the broken hover issue common with Dropdown Menus
+// when the menu is not a child element of the element being
+// hovered
+//
+// .dropdown-menu--messages:hover,
+// .dropdown-menu--messages__item:hover
+// .dropdown-menu--messages {
+//   transform: scaleY(1);
+// }
+
+/////////////////////////////////
 /// USER NAVIGATION
 
 .user-nav {
-  //   background-color: aqua;
+  position: relative;
   align-self: stretch;
   display: flex;
   align-items: center;
-  // margin-left: auto;
 
-  & > * {
+  // Important to attach Drawer menu!!!
+  &__user {
+    position: relative;
+  }
+
+  &__icon-box,
+  &__user {
     padding: 0 2rem;
     cursor: pointer;
     height: 100%;
@@ -86,12 +300,16 @@
     align-items: center;
   }
 
-  & > *:hover {
+  & > *:hover:not(:last-child) {
     background-color: var(--color-grey-light-2);
   }
 
   &__icon-box {
     position: relative;
+
+    &--messages {
+      position: relative;
+    }
   }
 
   &__icon {
@@ -101,13 +319,13 @@
   }
 
   &__notification {
+    position: absolute;
     font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
     border-radius: 50%;
     background-color: var(--color-primary);
     color: #fff;
-    position: absolute;
     top: 1.5rem;
     right: 1.1rem;
     display: flex;
@@ -119,7 +337,18 @@
     height: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem;
+    // transform: sc;
   }
+}
+
+// Applies hover effect on all children of the nav menu which has a
+// .dropdown-menu class
+.user-nav__icon-box--notifications:hover .dropdown-menu {
+  transform: scaleY(1);
+}
+
+.user-nav__icon-box--messages:hover ~ .dropdown-menu--messages {
+  transform: scaleY(1);
 }
 
 /////////////////////////////////
@@ -271,9 +500,6 @@
   &__stars {
     margin-right: auto;
     display: flex;
-  }
-
-  &__icon-star {
   }
 
   &__icon-star,

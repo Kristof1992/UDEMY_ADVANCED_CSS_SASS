@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
+    <!-- OPEN SANS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>trillo &mdash; Your all-in-one booking app</title>
   </head>
 
@@ -33,25 +41,225 @@
         </form>
 
         <nav class="user-nav">
-          <div class="user-nav__icon-box">
+          <!-- NOTIFICATION - 1 -->
+          <div class="user-nav__icon-box user-nav__icon-box--notifications">
             <svg class="search__icon">
               <use href="img/sprite.svg#icon-bookmark"></use>
             </svg>
             <span class="user-nav__notification">7</span>
+
+            <ul class="dropdown-menu dropdown-menu--notifications">
+              <li class="dropdown-menu--notifications__item">
+                <a href="#" class="dropdown-menu--notifications__link">
+                  <svg class="search__icon">
+                    <use href="img/sprite.svg#icon-bookmark"></use>
+                  </svg>
+                  <span class="dropdown-menu--notifications__text"
+                    >Some text here</span
+                  >
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="user-nav__icon-box">
+
+          <!-- MESSAGES - 2 -->
+          <div class="user-nav__icon-box user-nav__icon-box--messages">
             <svg class="search__icon">
               <use href="img/sprite.svg#icon-chat"></use>
             </svg>
             <span class="user-nav__notification">7</span>
           </div>
+
+          <!-- PROFILE - 3 -->
           <div class="user-nav__user">
             <img
-              src="img/user.jpg"
+              src="img/c.jpg"
               alt="User-photo"
               class="user-nav__user-photo"
             />
-            <span class="user-nav__user-name">Joe Doe</span>
+            <span class="user-nav__user-name">Sophia Harper</span>
+
+            <!-- PROFILE - 3 - DROPDOWN -->
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a href="#" class="dropdown-menu__link">
+                  <svg class="dropdown-menu__icon">
+                    <use href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                  <span class="dropdown-menu__text">Profile</span>
+                </a>
+              </li>
+
+              <li class="dropdown-menu__item">
+                <a href="#" class="dropdown-menu__link">
+                  <svg class="dropdown-menu__icon">
+                    <use href="img/sprite.svg#icon-book"></use>
+                  </svg>
+                  <span class="dropdown-menu__text">My Bookings</span>
+                </a>
+              </li>
+
+              <li class="dropdown-menu__item">
+                <a href="#" class="dropdown-menu__link">
+                  <svg class="dropdown-menu__icon">
+                    <use href="img/sprite.svg#icon-question"></use>
+                  </svg>
+                  <span class="dropdown-menu__text">Help</span>
+                </a>
+              </li>
+
+              <li class="dropdown-menu__item">
+                <a href="#" class="dropdown-menu__link">
+                  <svg class="dropdown-menu__icon">
+                    <use href="img/sprite.svg#icon-exit"></use>
+                  </svg>
+                  <span class="dropdown-menu__text">Logout</span>
+                </a>
+              </li>
+            </ul>
+            <!--  -->
+          </div>
+
+          <div class="wrapper">
+            <ul class="dropdown-menu--messages">
+              <li class="dropdown-menu--messages__item">
+                <a href="#" class="dropdown-menu--messages__link">
+                  <div class="dropdown-menu--messages__image-box">
+                    <img
+                      class="dropdown-menu--messages__image-box__image"
+                      src="img/user-6.jpg"
+                    />
+                  </div>
+
+                  <div class="dropdown-menu--messages__user__box">
+                    <p class="dropdown-menu--messages__user__name">
+                      Vicky Taylor<span
+                        class="dropdown-menu--messages__user__timestamp"
+                        >01:22</span
+                      >
+                    </p>
+                    <span class="dropdown-menu--messages__user__text"
+                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
+                    >
+                  </div>
+                </a>
+              </li>
+
+              <li class="dropdown-menu--messages__item">
+                <a href="#" class="dropdown-menu--messages__link">
+                  <div class="dropdown-menu--messages__image-box">
+                    <img
+                      class="dropdown-menu--messages__image-box__image"
+                      src="img/user-5.jpg"
+                    />
+                  </div>
+
+                  <div class="dropdown-menu--messages__user__box">
+                    <p class="dropdown-menu--messages__user__name">
+                      James Corden<span
+                        class="dropdown-menu--messages__user__timestamp"
+                        >05:11</span
+                      >
+                    </p>
+                    <span class="dropdown-menu--messages__user__text"
+                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
+                    >
+                  </div>
+                </a>
+              </li>
+
+              <li class="dropdown-menu--messages__item">
+                <a href="#" class="dropdown-menu--messages__link">
+                  <div class="dropdown-menu--messages__image-box">
+                    <img
+                      class="dropdown-menu--messages__image-box__image"
+                      src="img/user-4.jpg"
+                    />
+                  </div>
+
+                  <div class="dropdown-menu--messages__user__box">
+                    <p class="dropdown-menu--messages__user__name">
+                      Rick James<span
+                        class="dropdown-menu--messages__user__timestamp"
+                        >19:17</span
+                      >
+                    </p>
+                    <span class="dropdown-menu--messages__user__text"
+                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
+                    >
+                  </div>
+                </a>
+              </li>
+
+              <li class="dropdown-menu--messages__item">
+                <a href="#" class="dropdown-menu--messages__link">
+                  <div class="dropdown-menu--messages__image-box">
+                    <img
+                      class="dropdown-menu--messages__image-box__image"
+                      src="img/user-3.jpg"
+                    />
+                  </div>
+
+                  <div class="dropdown-menu--messages__user__box">
+                    <p class="dropdown-menu--messages__user__name">
+                      Mark Brown
+                      <span class="dropdown-menu--messages__user__timestamp"
+                        >06:22</span
+                      >
+                    </p>
+                    <span class="dropdown-menu--messages__user__text"
+                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
+                    >
+                  </div>
+                </a>
+              </li>
+
+              <li class="dropdown-menu--messages__item">
+                <a href="#" class="dropdown-menu--messages__link">
+                  <div class="dropdown-menu--messages__image-box">
+                    <img
+                      class="dropdown-menu--messages__image-box__image"
+                      src="img/user-2.jpg"
+                    />
+                  </div>
+
+                  <div class="dropdown-menu--messages__user__box">
+                    <p class="dropdown-menu--messages__user__name">
+                      Maria Robinson<span
+                        class="dropdown-menu--messages__user__timestamp"
+                        >07:00</span
+                      >
+                    </p>
+                    <span class="dropdown-menu--messages__user__text"
+                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
+                    >
+                  </div>
+                </a>
+              </li>
+
+              <li class="dropdown-menu--messages__item">
+                <a href="#" class="dropdown-menu--messages__link">
+                  <div class="dropdown-menu--messages__image-box">
+                    <img
+                      class="dropdown-menu--messages__image-box__image"
+                      src="img/user-1.jpg"
+                    />
+                  </div>
+
+                  <div class="dropdown-menu--messages__user__box">
+                    <p class="dropdown-menu--messages__user__name">
+                      Richard Palmer<span
+                        class="dropdown-menu--messages__user__timestamp"
+                        >9:14</span
+                      >
+                    </p>
+                    <span class="dropdown-menu--messages__user__text"
+                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
+                    >
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </nav>
       </header>
