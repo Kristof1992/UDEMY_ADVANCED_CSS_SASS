@@ -57,7 +57,7 @@
   }
 
   &__button {
-    background-color: var(--color-grey-light-2);
+    background-color: transparent;
     border: none;
 
     &:focus {
@@ -194,6 +194,10 @@
   overflow-y: auto;
   z-index: 500;
 
+  @media screen and (max-width: $bp-special-medium) {
+    height: 800%;
+  }
+
   // IMAGE BOX
   &__image-box {
     align-self: flex-start;
@@ -304,6 +308,10 @@
   transition: all 0.25s ease;
   font-family: "Open Sans", sans-serif;
   list-style: none;
+
+  @media screen and (max-width: $bp-special-medium) {
+    height: 800%;
+  }
 
   &__image-box {
     &__image {
@@ -857,6 +865,10 @@
 
   display: flex;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.2rem;
+  }
 
   &__item {
     flex: 0 0 50%;
