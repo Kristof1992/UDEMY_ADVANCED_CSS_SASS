@@ -145,8 +145,8 @@ body {
       align-self: center; } }
   @media only screen and (max-width: 41.25em) {
     .search {
-      order: 1;
-      flex: 0 1 98%; } }
+      flex: 0 1 98%;
+      order: 1; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -237,6 +237,14 @@ body {
       margin-top: 0.5rem;
       font-size: 2.2rem;
       font-weight: 500; }
+  .dropdown-menu--searchbar__stars {
+    display: flex;
+    margin-right: auto; }
+  .dropdown-menu--searchbar__icon-star {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
 
 .search:focus .dropdown-menu--searchbar {
   transform: scaleY(1); }
@@ -605,9 +613,17 @@ body {
       .overview__heading {
         font-size: 1.8rem;
         padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__heading {
+        padding: 1.25rem 0.8rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__stars {
+        flex: 1 0 25%;
+        margin-right: 0;
+        justify-content: center; } }
   .overview__icon-star, .overview__icon-location {
     display: inline-block;
     width: 1.75rem;
@@ -619,7 +635,9 @@ body {
     align-items: center; }
     @media only screen and (max-width: 31.25em) {
       .overview__location {
-        margin: 0 1rem; } }
+        flex: 1 0 25%;
+        justify-content: center;
+        font-size: 1rem; } }
   .overview__icon-location {
     margin-right: 0.5rem; }
   .overview__rating {
@@ -634,10 +652,9 @@ body {
     flex-direction: column; }
     @media only screen and (max-width: 31.25em) {
       .overview__rating {
-        padding: 0 1.5rem;
-        flex: 1 0 0;
-        order: 1;
-        margin-left: 0; } }
+        flex: 1 0 25%;
+        margin-left: 0;
+        padding: 1rem 2.25rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
@@ -650,7 +667,7 @@ body {
     text-transform: uppercase; }
     @media only screen and (max-width: 31.25em) {
       .overview__rating-count {
-        font-size: 0.8rem; } }
+        font-size: 0.65rem; } }
 
 .btn-inline {
   border: none;

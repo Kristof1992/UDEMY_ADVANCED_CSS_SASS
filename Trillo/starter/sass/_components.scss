@@ -23,8 +23,8 @@
   }
 
   @media only screen and (max-width: $bp-special-medium) {
-    order: 1;
     flex: 0 1 98%;
+    order: 1;
   }
 
 
@@ -168,6 +168,18 @@
       font-size: 2.2rem;
       font-weight: 500;
     }
+  }
+
+  &__stars {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__icon-star {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
   }
 
 }
@@ -740,11 +752,24 @@
       font-size: 1.8rem;
       padding: 1.25rem 2rem;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1.25rem 0.8rem;
+    }
   }
 
   &__stars {
     margin-right: auto;
     display: flex;
+
+    @media only screen and (max-width: $bp-smallest) {
+      // padding: 0 1.5rem;
+      flex: 1 0 25%;
+      margin-right: 0;
+      justify-content: center;
+      // order: 1;
+      // margin: 0 auto;
+    }
   }
 
   &__icon-star,
@@ -761,7 +786,9 @@
     align-items: center;
 
     @media only screen and (max-width: $bp-smallest) {
-      margin: 0 1rem;
+      flex: 1 0 25%;
+      justify-content: center;
+      font-size: 1rem;
     }
   }
 
@@ -782,10 +809,9 @@
     flex-direction: column;
 
     @media only screen and (max-width: $bp-smallest) {
-      padding: 0 1.5rem;
-      flex: 1 0 0;
-      order: 1;
+      flex: 1 0 25%;
       margin-left: 0;
+      padding: 1rem 2.25rem;
     }
   }
 
@@ -804,7 +830,7 @@
     text-transform: uppercase;
 
     @media only screen and (max-width: $bp-smallest) {
-      font-size: 0.8rem;
+      font-size: 0.65rem;
     }
   }
 }
