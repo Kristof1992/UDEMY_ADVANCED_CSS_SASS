@@ -22,11 +22,13 @@
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (max-width: $bp-smallest) {
+  @media only screen and (max-width: $bp-special-medium) {
     flex-wrap: wrap;
     align-content: space-around;
     height: 11rem;
   }
+
+
 }
 
 .content {
@@ -50,8 +52,7 @@
   flex: 1; // grow as much as it can - 1 argument means the first argument so flex-grow
 }
 
-.search__button {
-}
+.search__button {}
 
 .detail {
   font-size: 1.4rem;

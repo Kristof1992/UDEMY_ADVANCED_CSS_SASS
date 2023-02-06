@@ -1,459 +1,808 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- OPEN SANS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-    <title>trillo &mdash; Your all-in-one booking app</title>
-  </head>
+  <!-- OPEN SANS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-  <body>
-    <div class="container">
-      <header class="header">
-        <img src="img/logo.png" alt="trillo logo" class="logo" />
+  <title>trillo &mdash; Your all-in-one booking app</title>
+</head>
 
-        <form action="#" class="search">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Search hotels"
-          />
-          <button class="search__button">
-            <svg class="search__icon">
-              <use href="img/sprite.svg#icon-magnifying-glass"></use>
-            </svg>
-          </button>
-        </form>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="img/logo.png" alt="trillo logo" class="logo">
 
-        <nav class="user-nav">
-          <!-- NOTIFICATION - 1 -->
-          <div class="user-nav__icon-box user-nav__icon-box--notifications">
-            <svg class="search__icon">
-              <use href="img/sprite.svg#icon-bookmark"></use>
-            </svg>
-            <span class="user-nav__notification">7</span>
+      <form action="#" class="search">
 
-            <ul class="dropdown-menu dropdown-menu--notifications">
-              <li class="dropdown-menu--notifications__item">
-                <a href="#" class="dropdown-menu--notifications__link">
-                  <svg class="search__icon">
-                    <use href="img/sprite.svg#icon-bookmark"></use>
+        <ul class="dropdown-menu--searchbar">
+
+          <li class="dropdown-menu--searchbar__item">
+            <a href="#" class="dropdown-menu--searchbar__link">
+
+              <div class="dropdown-menu--searchbar__image-box">
+                <img class="dropdown-menu--searchbar__image-box__image" src="img/hotels/jack-hunter-land-0.jpg" alt="">
+              </div>
+
+              <div class="dropdown-menu--searchbar__left-box">
+                <div class="dropdown-menu--searchbar__left-box__name">
+                  Grand Hotel Europa
+                </div>
+                <div class="dropdown-menu--searchbar__left-box__address">
+                  Prague, Czechia
+                </div>
+
+                <div class="overview__stars">
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
                   </svg>
-                  <span class="dropdown-menu--notifications__text"
-                    >Some text here</span
-                  >
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- MESSAGES - 2 -->
-          <div class="user-nav__icon-box user-nav__icon-box--messages">
-            <svg class="search__icon">
-              <use href="img/sprite.svg#icon-chat"></use>
-            </svg>
-            <span class="user-nav__notification">7</span>
-          </div>
-
-          <!-- PROFILE - 3 -->
-          <div class="user-nav__user">
-            <img
-              src="img/c.jpg"
-              alt="User-photo"
-              class="user-nav__user-photo"
-            />
-            <span class="user-nav__user-name">Sophia Harper</span>
-
-            <!-- PROFILE - 3 - DROPDOWN -->
-            <ul class="dropdown-menu">
-              <li class="dropdown-menu__item">
-                <a href="#" class="dropdown-menu__link">
-                  <svg class="dropdown-menu__icon">
-                    <use href="img/sprite.svg#icon-user"></use>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
                   </svg>
-                  <span class="dropdown-menu__text">Profile</span>
-                </a>
-              </li>
-
-              <li class="dropdown-menu__item">
-                <a href="#" class="dropdown-menu__link">
-                  <svg class="dropdown-menu__icon">
-                    <use href="img/sprite.svg#icon-book"></use>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
                   </svg>
-                  <span class="dropdown-menu__text">My Bookings</span>
-                </a>
-              </li>
-
-              <li class="dropdown-menu__item">
-                <a href="#" class="dropdown-menu__link">
-                  <svg class="dropdown-menu__icon">
-                    <use href="img/sprite.svg#icon-question"></use>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
                   </svg>
-                  <span class="dropdown-menu__text">Help</span>
-                </a>
-              </li>
-
-              <li class="dropdown-menu__item">
-                <a href="#" class="dropdown-menu__link">
-                  <svg class="dropdown-menu__icon">
-                    <use href="img/sprite.svg#icon-exit"></use>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
                   </svg>
-                  <span class="dropdown-menu__text">Logout</span>
-                </a>
-              </li>
-            </ul>
-            <!--  -->
-          </div>
+                </div>
 
-          <div class="wrapper">
-            <ul class="dropdown-menu--messages">
-              <li class="dropdown-menu--messages__item">
-                <a href="#" class="dropdown-menu--messages__link">
-                  <div class="dropdown-menu--messages__image-box">
-                    <img
-                      class="dropdown-menu--messages__image-box__image"
-                      src="img/user-6.jpg"
-                    />
-                  </div>
+              </div>
 
-                  <div class="dropdown-menu--messages__user__box">
-                    <p class="dropdown-menu--messages__user__name">
-                      Vicky Taylor<span
-                        class="dropdown-menu--messages__user__timestamp"
-                        >01:22</span
-                      >
-                    </p>
-                    <span class="dropdown-menu--messages__user__text"
-                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
-                    >
-                  </div>
-                </a>
-              </li>
+              <div class="dropdown-menu--searchbar__right-box">
+                <div class="dropdown-menu--searchbar__right-box__rating-title">Customer Rating</div>
+                <div class="dropdown-menu--searchbar__right-box__rating-score">9.6</div>
+              </div>
 
-              <li class="dropdown-menu--messages__item">
-                <a href="#" class="dropdown-menu--messages__link">
-                  <div class="dropdown-menu--messages__image-box">
-                    <img
-                      class="dropdown-menu--messages__image-box__image"
-                      src="img/user-5.jpg"
-                    />
-                  </div>
+            </a>
+          </li>
 
-                  <div class="dropdown-menu--messages__user__box">
-                    <p class="dropdown-menu--messages__user__name">
-                      James Corden<span
-                        class="dropdown-menu--messages__user__timestamp"
-                        >05:11</span
-                      >
-                    </p>
-                    <span class="dropdown-menu--messages__user__text"
-                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
-                    >
-                  </div>
-                </a>
-              </li>
+          <li class="dropdown-menu--searchbar__item">
+            <a href="#" class="dropdown-menu--searchbar__link">
 
-              <li class="dropdown-menu--messages__item">
-                <a href="#" class="dropdown-menu--messages__link">
-                  <div class="dropdown-menu--messages__image-box">
-                    <img
-                      class="dropdown-menu--messages__image-box__image"
-                      src="img/user-4.jpg"
-                    />
-                  </div>
+              <div class="dropdown-menu--searchbar__image-box">
+                <img class="dropdown-menu--searchbar__image-box__image" src="img/hotels/anmol-seth-land-0.jpg" alt="">
+              </div>
 
-                  <div class="dropdown-menu--messages__user__box">
-                    <p class="dropdown-menu--messages__user__name">
-                      Rick James<span
-                        class="dropdown-menu--messages__user__timestamp"
-                        >19:17</span
-                      >
-                    </p>
-                    <span class="dropdown-menu--messages__user__text"
-                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
-                    >
-                  </div>
-                </a>
-              </li>
+              <div class="dropdown-menu--searchbar__left-box">
+                <div class="dropdown-menu--searchbar__left-box__name">
+                  Sea Horizon Resort
+                </div>
+                <div class="dropdown-menu--searchbar__left-box__address">
+                  Lisbon, Portugal
+                </div>
 
-              <li class="dropdown-menu--messages__item">
-                <a href="#" class="dropdown-menu--messages__link">
-                  <div class="dropdown-menu--messages__image-box">
-                    <img
-                      class="dropdown-menu--messages__image-box__image"
-                      src="img/user-3.jpg"
-                    />
-                  </div>
+                <div class="overview__stars">
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </div>
 
-                  <div class="dropdown-menu--messages__user__box">
-                    <p class="dropdown-menu--messages__user__name">
-                      Mark Brown
-                      <span class="dropdown-menu--messages__user__timestamp"
-                        >06:22</span
-                      >
-                    </p>
-                    <span class="dropdown-menu--messages__user__text"
-                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
-                    >
-                  </div>
-                </a>
-              </li>
+              </div>
 
-              <li class="dropdown-menu--messages__item">
-                <a href="#" class="dropdown-menu--messages__link">
-                  <div class="dropdown-menu--messages__image-box">
-                    <img
-                      class="dropdown-menu--messages__image-box__image"
-                      src="img/user-2.jpg"
-                    />
-                  </div>
+              <div class="dropdown-menu--searchbar__right-box">
+                <div class="dropdown-menu--searchbar__right-box__rating-title">Customer Rating</div>
+                <div class="dropdown-menu--searchbar__right-box__rating-score">9.4</div>
+              </div>
 
-                  <div class="dropdown-menu--messages__user__box">
-                    <p class="dropdown-menu--messages__user__name">
-                      Maria Robinson<span
-                        class="dropdown-menu--messages__user__timestamp"
-                        >07:00</span
-                      >
-                    </p>
-                    <span class="dropdown-menu--messages__user__text"
-                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
-                    >
-                  </div>
-                </a>
-              </li>
+            </a>
+          </li>
 
-              <li class="dropdown-menu--messages__item">
-                <a href="#" class="dropdown-menu--messages__link">
-                  <div class="dropdown-menu--messages__image-box">
-                    <img
-                      class="dropdown-menu--messages__image-box__image"
-                      src="img/user-1.jpg"
-                    />
-                  </div>
+          <li class="dropdown-menu--searchbar__item">
+            <a href="#" class="dropdown-menu--searchbar__link">
 
-                  <div class="dropdown-menu--messages__user__box">
-                    <p class="dropdown-menu--messages__user__name">
-                      Richard Palmer<span
-                        class="dropdown-menu--messages__user__timestamp"
-                        >9:14</span
-                      >
-                    </p>
-                    <span class="dropdown-menu--messages__user__text"
-                      >Lorem, ipsum dolor sit amet consectetur asdfasdf.</span
-                    >
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+              <div class="dropdown-menu--searchbar__image-box">
+                <img class="dropdown-menu--searchbar__image-box__image" src="img/hotels/cory-bjork-land-0.jpg" alt="">
+              </div>
 
-      <div class="content">
-        <nav class="sidebar">
-          <ul class="side-nav">
-            <li class="side-nav__item side-nav__item--active">
-              <a href="#" class="side-nav__link">
-                <svg class="side-nav__icon">
-                  <use href="img/sprite.svg#icon-home"></use>
+              <div class="dropdown-menu--searchbar__left-box">
+                <div class="dropdown-menu--searchbar__left-box__name">
+                  Taste of the Sea
+                </div>
+                <div class="dropdown-menu--searchbar__left-box__address">
+                  Bratislava, Slovakia
+                </div>
+
+                <div class="overview__stars">
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star-outlined"></use>
+                  </svg>
+
+                </div>
+
+              </div>
+
+              <div class="dropdown-menu--searchbar__right-box">
+                <div class="dropdown-menu--searchbar__right-box__rating-title">Customer Rating</div>
+                <div class="dropdown-menu--searchbar__right-box__rating-score">9.3</div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="dropdown-menu--searchbar__item">
+            <a href="#" class="dropdown-menu--searchbar__link">
+
+              <div class="dropdown-menu--searchbar__image-box">
+                <img class="dropdown-menu--searchbar__image-box__image" src="img/hotels/sara-dubler-land-0.jpg" alt="">
+              </div>
+
+              <div class="dropdown-menu--searchbar__left-box">
+                <div class="dropdown-menu--searchbar__left-box__name">
+                  The Sea Suite Resort
+                </div>
+                <div class="dropdown-menu--searchbar__left-box__address">
+                  Bali, Indonesia
+                </div>
+
+                <div class="overview__stars">
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </div>
+
+              </div>
+
+              <div class="dropdown-menu--searchbar__right-box">
+                <div class="dropdown-menu--searchbar__right-box__rating-title">Customer Rating</div>
+                <div class="dropdown-menu--searchbar__right-box__rating-score">8.6</div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="dropdown-menu--searchbar__item">
+            <a href="#" class="dropdown-menu--searchbar__link">
+
+              <div class="dropdown-menu--searchbar__image-box">
+                <img class="dropdown-menu--searchbar__image-box__image" src="img/hotels/the-anam-land-0.jpg" alt="">
+              </div>
+
+              <div class="dropdown-menu--searchbar__left-box">
+                <div class="dropdown-menu--searchbar__left-box__name">
+                  Paradise Point Resort
+                </div>
+                <div class="dropdown-menu--searchbar__left-box__address">
+                  Madagascar, Morombe
+                </div>
+
+                <div class="overview__stars">
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star-outlined"></use>
+                  </svg>
+                </div>
+
+              </div>
+
+              <div class="dropdown-menu--searchbar__right-box">
+                <div class="dropdown-menu--searchbar__right-box__rating-title">Customer Rating</div>
+                <div class="dropdown-menu--searchbar__right-box__rating-score">9.1</div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="dropdown-menu--searchbar__item">
+            <a href="#" class="dropdown-menu--searchbar__link">
+
+              <div class="dropdown-menu--searchbar__image-box">
+                <img class="dropdown-menu--searchbar__image-box__image" src="img/hotels/zero-take-land-0.jpg" alt="">
+              </div>
+
+              <div class="dropdown-menu--searchbar__left-box">
+                <div class="dropdown-menu--searchbar__left-box__name">
+                  Moody Moon Resort
+                </div>
+                <div class="dropdown-menu--searchbar__left-box__address">
+                  Budapest, Hungary
+                </div>
+
+                <div class="overview__stars">
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="overview__icon-star">
+                    <use href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </div>
+
+              </div>
+
+              <div class="dropdown-menu--searchbar__right-box">
+                <div class="dropdown-menu--searchbar__right-box__rating-title">Customer Rating</div>
+                <div class="dropdown-menu--searchbar__right-box__rating-score">9.3</div>
+              </div>
+
+            </a>
+          </li>
+
+        </ul>
+
+        <input type="text" class="search__input" placeholder="Search hotels">
+        <button class="search__button">
+          <svg class="search__icon">
+            <use href="img/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+
+
+
+
+
+
+      <nav class="user-nav">
+        <div class="user-nav__icon-box user-nav__icon-box--notifications">
+          <svg class="search__icon">
+            <use href="img/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span class="user-nav__notification">7</span>
+        </div>
+
+        <!-- DROPDOWN MENU - NOTIFICATIONS -->
+        <ul class="dropdown-menu--notifications">
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
+                  <use href="img/sprite.svg#icon-hand"></use>
                 </svg>
-                <span class="icon-text">Home</span>
-              </a>
-            </li>
-            <li class="side-nav__item">
-              <a href="#" class="side-nav__link">
-                <svg class="side-nav__icon">
-                  <use href="img/sprite.svg#icon-aircraft-take-off"></use>
-                </svg>
-                <span class="icon-text">Flight</span>
-              </a>
-            </li>
-            <li class="side-nav__item">
-              <a href="#" class="side-nav__link">
-                <svg class="side-nav__icon">
+              </div>
+
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Great news, you are all set and ready to go
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
                   <use href="img/sprite.svg#icon-key"></use>
                 </svg>
-                <span class="icon-text">Car rental</span>
+              </div>
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Parking has been added to your booking!
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
+                  <use href="img/sprite.svg#icon-credit-card"></use>
+                </svg>
+              </div>
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Your Payment has been received!
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
+                  <use href="img/sprite.svg#icon-v-card"></use>
+                </svg>
+              </div>
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Profile settings changed!
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
+                  <use href="img/sprite.svg#icon-info-with-circle"></use>
+                </svg>
+              </div>
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Important Security Notification!
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
+                  <use href="img/sprite.svg#icon-info-with-circle"></use>
+                </svg>
+              </div>
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Important Security Notification!
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
+                  <use href="img/sprite.svg#icon-info-with-circle"></use>
+                </svg>
+              </div>
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Important Security Notification!
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--notifications__item">
+            <a href="#" class="dropdown-menu--notifications__link">
+              <div class="dropdown-menu--notifications__image-box">
+                <svg class="dropdown-menu--notifications__image-box__icon">
+                  <use href="img/sprite.svg#icon-info-with-circle"></use>
+                </svg>
+              </div>
+              <div class="dropdown-menu--notifications__text-box">
+                <div class="dropdown-menu--notifications__text-box__message">
+                  Important Security Notification!
+                </div>
+                <div class="dropdown-menu--notifications__text-box__timestamp">
+                  01:22
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="user-nav__icon-box user-nav__icon-box--messages">
+          <svg class="search__icon">
+            <use href="img/sprite.svg#icon-chat"></use>
+          </svg>
+          <span class="user-nav__notification">7</span>
+        </div>
+
+        <div class="user-nav__user">
+          <img src="img/profile-cut-0.jpg" alt="User-photo" class="user-nav__user-photo">
+          <span class="user-nav__user-name">Sophia Harper</span>
+
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu__item">
+              <a href="#" class="dropdown-menu__link">
+                <svg class="dropdown-menu__icon">
+                  <use href="img/sprite.svg#icon-user"></use>
+                </svg>
+                <span class="dropdown-menu__text">Profile</span>
               </a>
             </li>
-            <li class="side-nav__item">
-              <a href="#" class="side-nav__link">
-                <svg class="side-nav__icon">
-                  <use href="img/sprite.svg#icon-map"></use>
+
+            <li class="dropdown-menu__item">
+              <a href="#" class="dropdown-menu__link">
+                <svg class="dropdown-menu__icon">
+                  <use href="img/sprite.svg#icon-book"></use>
                 </svg>
-                <span class="icon-text">Tours</span>
+                <span class="dropdown-menu__text">My Bookings</span>
+              </a>
+            </li>
+
+            <li class="dropdown-menu__item">
+              <a href="#" class="dropdown-menu__link">
+                <svg class="dropdown-menu__icon">
+                  <use href="img/sprite.svg#icon-question"></use>
+                </svg>
+                <span class="dropdown-menu__text">Help</span>
+              </a>
+            </li>
+
+            <li class="dropdown-menu__item">
+              <a href="#" class="dropdown-menu__link">
+                <svg class="dropdown-menu__icon">
+                  <use href="img/sprite.svg#icon-exit"></use>
+                </svg>
+                <span class="dropdown-menu__text">Logout</span>
               </a>
             </li>
           </ul>
+        </div>
 
-          <div class="legal">
-            Whatever &copy; 2023 by Trillo. All rights reserved.
-          </div>
-        </nav>
+        <ul class="dropdown-menu--messages">
+          <li class="dropdown-menu--messages__item">
+            <a href="#" class="dropdown-menu--messages__link">
+              <div class="dropdown-menu--messages__image-box">
+                <img src="img/user-6.jpg" class="dropdown-menu--messages__image-box__image" alt="user image">
+              </div>
 
-        <main class="hotel-view">
-          <div class="gallery">
-            <figure class="gallery__item">
-              <img
-                src="img/hotel-1.jpg"
-                alt="Photo of hotel 1"
-                class="gallery__photo"
-              />
-            </figure>
-            <figure class="gallery__item">
-              <img
-                src="img/hotel-2.jpg"
-                alt="Photo of hotel 2"
-                class="gallery__photo"
-              />
-            </figure>
-            <figure class="gallery__item">
-              <img
-                src="img/hotel-3.jpg"
-                alt="Photo of hotel 3"
-                class="gallery__photo"
-              />
-            </figure>
-          </div>
-
-          <div class="overview">
-            <h1 class="overview__heading">Hotel Las Palmas</h1>
-
-            <div class="overview__stars">
-              <svg class="overview__icon-star">
-                <use href="img/sprite.svg#icon-star"></use>
-              </svg>
-              <svg class="overview__icon-star">
-                <use href="img/sprite.svg#icon-star"></use>
-              </svg>
-              <svg class="overview__icon-star">
-                <use href="img/sprite.svg#icon-star"></use>
-              </svg>
-              <svg class="overview__icon-star">
-                <use href="img/sprite.svg#icon-star"></use>
-              </svg>
-              <svg class="overview__icon-star">
-                <use href="img/sprite.svg#icon-star"></use>
-              </svg>
-            </div>
-
-            <div class="overview__location">
-              <svg class="overview__icon-location">
-                <use href="img/sprite.svg#icon-location-pin"></use>
-              </svg>
-              <button class="btn-inline">Albufeira, Portugal</button>
-            </div>
-
-            <div class="overview__rating">
-              <div class="overview__rating-average">8.6</div>
-              <div class="overview__rating-count">429 votes</div>
-            </div>
-          </div>
-
-          <div class="detail">
-            <div class="description">
-              <p class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-                nisi dignissimos debitis ratione sapiente saepe. Accusantium
-                cumque, quas, ut corporis incidunt deserunt quae architecto
-                voluptate.
-              </p>
-              <p class="paragraph">
-                Accusantium cumque, quas, ut corporis incidunt deserunt quae
-                architecto voluptate delectus, inventore iure aliquid aliquam.
-              </p>
-              <ul class="list">
-                <li class="list__item">Close to the beach</li>
-                <li class="list__item">Breakfast included</li>
-                <li class="list__item">Free airport shuttle</li>
-                <li class="list__item">Free wifi in all rooms</li>
-                <li class="list__item">Air conditioning and heating</li>
-                <li class="list__item">Pets allowed</li>
-                <li class="list__item">We speak all languages</li>
-                <li class="list__item">Perfect for families</li>
-              </ul>
-              <div class="recommend">
-                <p class="recommend__count">
-                  Lucy and 3 other friends recommend this hotel.
-                </p>
-                <div class="recommend__friends">
-                  <img src="img/user-3.jpg" alt="" class="recommend__photo" />
-                  <img src="img/user-4.jpg" alt="" class="recommend__photo" />
-                  <img src="img/user-5.jpg" alt="" class="recommend__photo" />
-                  <img src="img/user-6.jpg" alt="" class="recommend__photo" />
+              <div class="dropdown-menu--messages__text-box">
+                <div class="dropdown-menu--messages__text-box__top">
+                  <div class="dropdown-menu--messages__text-box__top__name">
+                    Vicky Palmer
+                  </div>
+                  <div class="dropdown-menu--messages__text-box__top__timestamp">
+                    05:11
+                  </div>
+                </div>
+                <div class="dropdown-menu--messages__text-box__bottom">
+                  <div class="dropdown-menu--messages__text-box__bottom__message">
+                    Great news, you are all set and ready to go
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+          </li>
 
-            <div class="user-reviews">
-              <figure class="review">
-                <blockquote class="review__text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                  doloremque architecto dicta animi, totam, itaque officia ex.
-                </blockquote>
-                <figcaption class="review__user">
-                  <img
-                    src="img/user-1.jpg"
-                    alt="User 1"
-                    class="review__photo"
-                  />
-                  <div class="review__user-box">
-                    <p class="review__user-name">Nick Smith</p>
-                    <p class="review__user-date">Feb 23rd, 2017</p>
+          <li class="dropdown-menu--messages__item">
+            <a href="#" class="dropdown-menu--messages__link">
+              <div class="dropdown-menu--messages__image-box">
+                <img src="img/user-4.jpg" class="dropdown-menu--messages__image-box__image" alt="user image">
+              </div>
+              <div class="dropdown-menu--messages__text-box">
+                <div class="dropdown-menu--messages__text-box__top">
+                  <div class="dropdown-menu--messages__text-box__top__name">
+                    Rick James
                   </div>
-                  <div class="review__rating">7.8</div>
-                </figcaption>
-              </figure>
-
-              <figure class="review">
-                <blockquote class="review__text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                  doloremque architecto dicta animi.
-                </blockquote>
-                <figcaption class="review__user">
-                  <img
-                    src="img/user-2.jpg"
-                    alt="User 2"
-                    class="review__photo"
-                  />
-                  <div class="review__user-box">
-                    <p class="review__user-name">Mary Thomas</p>
-                    <p class="review__user-date">Sep 13rd, 2017</p>
+                  <div class="dropdown-menu--messages__text-box__top__timestamp">
+                    05:11
                   </div>
-                  <div class="review__rating">9.3</div>
-                </figcaption>
-              </figure>
+                </div>
+                <div class="dropdown-menu--messages__text-box__bottom">
+                  <div class="dropdown-menu--messages__text-box__bottom__message">
+                    Lorem, ipsum dolor sit amet consectetur asdfasdf.
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
 
-              <button class="btn-inline">Show all <span>&rarr;</span></button>
+          <li class="dropdown-menu--messages__item">
+            <a href="#" class="dropdown-menu--messages__link">
+              <div class="dropdown-menu--messages__image-box">
+                <img src="img/user-3.jpg" class="dropdown-menu--messages__image-box__image" alt="user image">
+              </div>
+              <div class="dropdown-menu--messages__text-box">
+                <div class="dropdown-menu--messages__text-box__top">
+                  <div class="dropdown-menu--messages__text-box__top__name">
+                    Mark Brown
+                  </div>
+                  <div class="dropdown-menu--messages__text-box__top__timestamp">
+                    05:11
+                  </div>
+                </div>
+                <div class="dropdown-menu--messages__text-box__bottom">
+                  <div class="dropdown-menu--messages__text-box__bottom__message">
+                    Lorem, ipsum dolor sit amet consectetur asdfasdf.
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--messages__item">
+            <a href="#" class="dropdown-menu--messages__link">
+              <div class="dropdown-menu--messages__image-box">
+                <img src="img/user-2.jpg" class="dropdown-menu--messages__image-box__image" alt="user image">
+              </div>
+              <div class="dropdown-menu--messages__text-box">
+                <div class="dropdown-menu--messages__text-box__top">
+                  <div class="dropdown-menu--messages__text-box__top__name">
+                    Maria Robinson
+                  </div>
+                  <div class="dropdown-menu--messages__text-box__top__timestamp">
+                    07:00
+                  </div>
+                </div>
+                <div class="dropdown-menu--messages__text-box__bottom">
+                  <div class="dropdown-menu--messages__text-box__bottom__message">
+                    Lorem, ipsum dolor sit amet consectetur asdfasdf.
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="dropdown-menu--messages__item">
+            <a href="#" class="dropdown-menu--messages__link">
+              <div class="dropdown-menu--messages__image-box">
+                <img src="img/user-1.jpg" class="dropdown-menu--messages__image-box__image" alt="user image">
+              </div>
+              <div class="dropdown-menu--messages__text-box">
+                <div class="dropdown-menu--messages__text-box__top">
+                  <div class="dropdown-menu--messages__text-box__top__name">
+                    Richard Palmer
+                  </div>
+                  <div class="dropdown-menu--messages__text-box__top__timestamp">
+                    9:14
+                  </div>
+                </div>
+                <div class="dropdown-menu--messages__text-box__bottom">
+                  <div class="dropdown-menu--messages__text-box__bottom__message">
+                    Lorem, ipsum dolor sit amet consectetur asdfasdf.
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <nav class="sidebar">
+        <ul class="side-nav">
+          <li class="side-nav__item side-nav__item--active">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use href="img/sprite.svg#icon-home"></use>
+              </svg>
+              <span class="icon-text">Home</span>
+            </a>
+          </li>
+          <li class="side-nav__item">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use href="img/sprite.svg#icon-aircraft-take-off"></use>
+              </svg>
+              <span class="icon-text">Flight</span>
+            </a>
+          </li>
+          <li class="side-nav__item">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use href="img/sprite.svg#icon-key"></use>
+              </svg>
+              <span class="icon-text">Car rental</span>
+            </a>
+          </li>
+          <li class="side-nav__item">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use href="img/sprite.svg#icon-map"></use>
+              </svg>
+              <span class="icon-text">Tours</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="legal">
+          Whatever &copy; 2023 by Trillo. All rights reserved.
+        </div>
+      </nav>
+
+      <main class="hotel-view">
+        <div class="gallery">
+          <figure class="gallery__item">
+            <img src="img/hotel-1.jpg" alt="Photo of hotel 1" class="gallery__photo">
+            <figcaption class="gallery__title">Enjoy the atmosphere</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo">
+            <figcaption class="gallery__title">Relax by the sea</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo">
+            <figcaption class="gallery__title">Revitalize your health</figcaption>
+          </figure>
+        </div>
+
+        <div class="overview">
+          <h1 class="overview__heading">Hotel Las Palmas</h1>
+
+          <div class="overview__stars">
+            <svg class="overview__icon-star">
+              <use href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="overview__icon-star">
+              <use href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="overview__icon-star">
+              <use href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="overview__icon-star">
+              <use href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="overview__icon-star">
+              <use href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+
+          <div class="overview__location">
+            <svg class="overview__icon-location">
+              <use href="img/sprite.svg#icon-location-pin"></use>
+            </svg>
+            <button class="btn-inline">Albufeira, Portugal</button>
+          </div>
+
+          <div class="overview__rating">
+            <div class="overview__rating-average">8.6</div>
+            <div class="overview__rating-count">429 votes</div>
+          </div>
+        </div>
+
+        <div class="detail">
+          <div class="description">
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+              nisi dignissimos debitis ratione sapiente saepe. Accusantium
+              cumque, quas, ut corporis incidunt deserunt quae architecto
+              voluptate.
+            </p>
+            <p class="paragraph">
+              Accusantium cumque, quas, ut corporis incidunt deserunt quae
+              architecto voluptate delectus, inventore iure aliquid aliquam.
+            </p>
+            <ul class="list">
+              <li class="list__item">Close to the beach</li>
+              <li class="list__item">Breakfast included</li>
+              <li class="list__item">Free airport shuttle</li>
+              <li class="list__item">Free wifi in all rooms</li>
+              <li class="list__item">Air conditioning and heating</li>
+              <li class="list__item">Pets allowed</li>
+              <li class="list__item">We speak all languages</li>
+              <li class="list__item">Perfect for families</li>
+            </ul>
+            <div class="recommend">
+              <p class="recommend__count">
+                Lucy and 3 other friends recommend this hotel.
+              </p>
+              <div class="recommend__friends">
+                <img src="img/user-3.jpg" alt="" class="recommend__photo">
+                <img src="img/user-4.jpg" alt="" class="recommend__photo">
+                <img src="img/user-5.jpg" alt="" class="recommend__photo">
+                <img src="img/user-6.jpg" alt="" class="recommend__photo">
+              </div>
             </div>
           </div>
-          <!-- /DETAIL -->
-          <div class="cta">
-            <h2 class="cta__book-now">
-              Good news! We have 4 free rooms for your selected dates!
-            </h2>
-            <button class="btn">
-              <span class="btn__visible">Book now</span>
-              <span class="btn__invisible">Only 4 rooms left</span>
-            </button>
+
+          <div class="user-reviews">
+            <figure class="review">
+              <blockquote class="review__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                doloremque architecto dicta animi, totam, itaque officia ex.
+              </blockquote>
+              <figcaption class="review__user">
+                <img src="img/user-1.jpg" alt="User 1" class="review__photo">
+                <div class="review__user-box">
+                  <p class="review__user-name">Nick Smith</p>
+                  <p class="review__user-date">Feb 23rd, 2017</p>
+                </div>
+                <div class="review__rating">7.8</div>
+              </figcaption>
+            </figure>
+
+            <figure class="review">
+              <blockquote class="review__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                doloremque architecto dicta animi.
+              </blockquote>
+              <figcaption class="review__user">
+                <img src="img/user-2.jpg" alt="User 2" class="review__photo">
+                <div class="review__user-box">
+                  <p class="review__user-name">Mary Thomas</p>
+                  <p class="review__user-date">Sep 13rd, 2017</p>
+                </div>
+                <div class="review__rating">9.3</div>
+              </figcaption>
+            </figure>
+
+            <button class="btn-inline">Show all <span>&rarr;</span></button>
           </div>
-        </main>
-      </div>
+        </div>
+
+        <div class="cta">
+          <h2 class="cta__book-now">
+            Good news! We have 4 free rooms for your selected dates!
+          </h2>
+          <button class="btn">
+            <span class="btn__visible">Book now</span>
+            <span class="btn__invisible">Only 4 rooms left</span>
+          </button>
+        </div>
+      </main>
     </div>
-  </body>
+
+  </div>
+
+</body>
+
 </html>

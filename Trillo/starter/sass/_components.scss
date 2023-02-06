@@ -10,22 +10,29 @@
 /// SEARCH
 
 .search {
-  flex: 0 0 40%;
+  position: relative;
+  flex: 0 1 40%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: $bp-smallest) {
-    order: 1;
-    flex: 0 0 100%;
-    background-color: var(--color-grey-light-2);
+  @media only screen and (max-width: $bp-medium) {
+    flex: 0 1 55%;
+    align-self: center;
   }
+
+  @media only screen and (max-width: $bp-special-medium) {
+    order: 1;
+    flex: 0 1 98%;
+  }
+
 
   &__input {
     font-family: inherit;
     font-size: inherit;
-    background-color: var(--color-grey-light-2);
+    // Change here for debugging
+    background-color: var(--color-grey-light-1);
     border: none;
     padding: 0.7rem 2rem;
     border-radius: 100px;
@@ -45,13 +52,14 @@
     }
   }
 
-  &__input:focus + &__button {
+  &__input:focus+&__button {
     background-color: var(--color-grey-light-3);
   }
 
   &__button {
     background-color: var(--color-grey-light-2);
     border: none;
+
     &:focus {
       outline: none;
     }
@@ -68,17 +76,353 @@
   }
 }
 
-/////////////////////////////////
-/// DROPDOWN MENU - PROFILE
+// **********************************
+// ********* DROPDOWN MENUS *********
+// **********************************
 
-// .user-nav__user:hover .dropdown-menu {
+.search:focus-within .dropdown-menu--searchbar {
+  transform: scaleY(1);
+}
+
+/////////////////////////////////
+/// DROPDOWN MENU - NOTIFICATIONS
+
+.dropdown-menu--searchbar {
+  position: absolute;
+  top: 115%;
+  left: 4%;
+  list-style: none;
+  background-color: #fff;
+  width: 95%;
+  box-shadow: var(--shadow-dark);
+  transform-origin: top;
+  transition: all 0.25s ease;
+  height: 900%;
+  overflow-y: auto;
+  z-index: 500;
+  transform: scaleY(0);
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 100%;
+    left: 1%;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--color-grey-light-4);
+    background-color: var(--color-grey-light-1);
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  &__link {
+    cursor: default;
+    color: var(--color-grey-dark-1);
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    justify-content: flex-start;
+
+    &:active {
+      color: var(--color-primary);
+    }
+  }
+
+  &__image-box {
+    &__image {
+      display: block;
+      width: 10.5rem;
+      height: 7.5rem;
+    }
+  }
+
+  &__left-box {
+    margin-left: 1rem;
+    flex: 1 0 0;
+    font-weight: 600;
+
+    &__name {
+      font-size: 1.5rem;
+    }
+
+    &__address {
+      font-size: 1.4rem;
+    }
+
+  }
+
+  &__right-box {
+    flex: 0 1 32%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__rating-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    &__rating-score {
+      margin-top: 0.5rem;
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+  }
+
+}
+
+.search:focus .dropdown-menu--searchbar {
+  transform: scaleY(1);
+}
+
+/////////////////////////////////
+/// DROPDOWN MENU - NOTIFICATIONS
+.dropdown-menu--notifications {
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 80%;
+  transform: scaleY(0);
+  box-shadow: var(--shadow-dark);
+  transform-origin: top;
+  transition: all 0.25s ease;
+  height: 400%;
+  overflow-y: auto;
+  z-index: 500;
+
+  // IMAGE BOX
+  &__image-box {
+    align-self: flex-start;
+    margin-top: 0.1rem;
+
+    &__icon {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+
+    &__message {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      color: var(--color-grey-dark-3);
+    }
+
+    &__timestamp {
+      font-size: 1rem;
+      align-self: flex-start;
+      margin-left: auto;
+      color: var(--color-grey-dark-3);
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 1.2rem 1.4rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-grey-light-4);
+    background-color: var(--color-grey-light-1);
+    color: black;
+  }
+
+  &__link:active {
+    color: black;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+  }
+
+  &__link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 97%;
+    width: 3px;
+    background-color: #fff;
+    // Cool property to use for animation it adjusts the animation direction starting point
+    // transform-origin: top;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  &__item:nth-child(1) &__link::before {
+    background-color: var(--color-primary);
+  }
+
+
+  &__item:nth-child(1) &__text-box__timestamp {
+    font-weight: 500;
+    color: var(--color-grey-dark-2);
+  }
+
+  &__item:nth-child(1) &__text-box__message {
+    font-weight: 600;
+  }
+}
+
+// DROPDOWN HOVER
+.user-nav__icon-box--notifications:hover~.dropdown-menu--notifications {
+  transform: scaleY(1);
+}
+
+.dropdown-menu--notifications:hover,
+.dropdown-menu--notifications__item:hover .dropdown-menu--notifications {
+  transform: scaleY(1);
+}
+
+/////////////////////////////////
+/// DROPDOWN MENU - MESSAGES
+.dropdown-menu--messages {
+  position: absolute;
+  background-color: var(--color-grey-light-1);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  z-index: 600;
+  height: 400%;
+  overflow-y: auto;
+  transform: scaleY(0);
+  box-shadow: var(--shadow-dark);
+  transform-origin: top;
+  transition: all 0.25s ease;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+
+  &__image-box {
+    &__image {
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+
+      &__name {
+        margin-top: -0.3rem;
+        font-size: 1.4rem;
+        display: flex;
+        font-weight: 500;
+        color: var(--color-grey-dark-1);
+      }
+
+      &__timestamp {
+        font-size: 1rem;
+        align-self: flex-start;
+        color: var(--color-grey-dark-3);
+        margin-left: auto;
+      }
+    }
+
+    &__bottom {
+      &__message {
+        font-size: 1.1rem;
+        color: var(--color-grey-dark-3);
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    padding: 0.9rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-grey-light-4);
+    background-color: var(--color-grey-light-1);
+    color: black;
+  }
+
+  &__link:active {
+    color: black;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+  }
+
+  &__link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 97%;
+    width: 3px;
+    background-color: white;
+    // transform: scaleY(0);
+    // Cool property to use for animation it adjusts the animation direction starting point
+    // transform-origin: top;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  // Selects the first two list items of the dropdown and then selects
+  // the ::before pseudo element of the nested <a> and changes the color.
+  &__item:nth-child(-n + 2) &__link::before {
+    background-color: var(--color-primary);
+  }
+
+  &__item:nth-child(-n + 2) &__text-box__top__timestamp {
+    font-weight: 600;
+  }
+
+  &__item:nth-child(-n + 2) &__text-box__bottom__message {
+    color: var(--color-grey-dark-2);
+    font-weight: 500;
+  }
+}
+
+// MESSAGES DROPDOWN HOVER SELECTION
+.user-nav__icon-box--messages:hover~.dropdown-menu--messages {
+  transform: scaleY(1);
+}
+
+.dropdown-menu--messages:hover,
+.dropdown-menu--messages__item:hover {
+  transform: scaleY(1);
+}
+
+// *** Making the dropdown work - Version 1  ***
+// Tackles the broken hover issue common with Dropdown Menus
+// when the menu is not a child element of the element being
+// hovered!!!
+//
+// .dropdown-menu--messages:hover,
+// .dropdown-menu--messages__item:hover
+// .dropdown-menu--messages {
 //   transform: scaleY(1);
 // }
 
-.user-nav__user:hover .dropdown-menu__item:hover .dropdown-menu__link {
-  color: white;
-  transition: 0.2s 0.3s;
-}
+/////////////////////////////////
+/// DROPDOWN MENU - PROFILE
 
 .dropdown-menu {
   transform: scaleY(0);
@@ -149,133 +493,14 @@
   }
 }
 
-/////////////////////////////////
-/// DROPDOWN MENU - MESSAGES
-
-.dropdown-menu--messages {
-  font-family: "Open Sans", sans-serif;
-  transform: scaleY(0);
-  list-style: none;
-
-  &__image-box {
-    &__image {
-      border-radius: 50%;
-      width: 4rem;
-      height: 4rem;
-    }
-  }
-
-  &__user {
-    &__box {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__name {
-      font-size: 1.4rem;
-      display: flex;
-      align-items: center;
-      font-weight: 600;
-      color: var(--color-grey-dark-1);
-    }
-
-    &__text {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: var(--color-grey-dark-2);
-    }
-
-    &__timestamp {
-      color: var(--color-grey-dark-3);
-      margin-left: auto;
-      font-size: 0.9rem;
-    }
-  }
-
-  &__item {
-    position: relative;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.9rem;
-    gap: 1rem;
-    border-bottom: 1px solid var(--color-grey-light-4);
-    background-color: var(--color-grey-light-1);
-    color: black;
-  }
-
-  &__link:active {
-    color: black;
-  }
-
-  &__link:hover {
-    background-color: #fff;
-  }
-
-  &__link::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 97%;
-    width: 3px;
-    background-color: white;
-    // transform: scaleY(0);
-    // Cool property to use for animation it adjusts the animation direction starting point
-    // transform-origin: top;
-    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
-      background-color 0.1s;
-  }
-
-  // Selects the first two list items of the dropdown and then selects
-  // the ::before pseudo element of the nested <a> and changes the color.
-  &__item:nth-child(-n + 2) &__link::before {
-    background-color: var(--color-primary);
-  }
-}
-
-.wrapper {
-  position: absolute;
-  background-color: var(--color-grey-light-1);
-  top: 100%;
-  left: 0;
-  width: 100%;
-  list-style: none;
-  z-index: 600;
-  height: 400%;
-  overflow-y: auto;
-
-  transform: scaleY(0);
-
-  box-shadow: var(--shadow-dark);
-
-  transform-origin: top;
-  transition: all 0.25s ease;
-}
-
-.user-nav__icon-box--messages:hover ~ .wrapper,
-.dropdown-menu--messages {
+.user-nav__user:hover .dropdown-menu {
   transform: scaleY(1);
 }
 
-.wrapper:hover,
-.dropdown-menu--messages__item:hover {
-  transform: scaleY(1);
+.user-nav__user:hover .dropdown-menu__item:hover .dropdown-menu__link {
+  color: white;
+  transition: 0.2s 0.3s;
 }
-
-// *** Making the dropdown work - Version 1  ***
-// Tackles the broken hover issue common with Dropdown Menus
-// when the menu is not a child element of the element being
-// hovered
-//
-// .dropdown-menu--messages:hover,
-// .dropdown-menu--messages__item:hover
-// .dropdown-menu--messages {
-//   transform: scaleY(1);
-// }
 
 /////////////////////////////////
 /// USER NAVIGATION
@@ -300,7 +525,7 @@
     align-items: center;
   }
 
-  & > *:hover:not(:last-child) {
+  &>*:hover {
     background-color: var(--color-grey-light-2);
   }
 
@@ -337,18 +562,7 @@
     height: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem;
-    // transform: sc;
   }
-}
-
-// Applies hover effect on all children of the nav menu which has a
-// .dropdown-menu class
-.user-nav__icon-box--notifications:hover .dropdown-menu {
-  transform: scaleY(1);
-}
-
-.user-nav__icon-box--messages:hover ~ .dropdown-menu--messages {
-  transform: scaleY(1);
 }
 
 /////////////////////////////////
@@ -430,11 +644,6 @@
     }
   }
 
-  &__link:hover {
-    // background-color: aqua;
-    // background-position: 100%;
-  }
-
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -468,7 +677,30 @@
   display: flex;
 
   &__item {
-    background-color: orangered;
+    position: relative;
+
+    &:hover .gallery__title {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    font-size: 1.6rem;
+
+    opacity: 0;
+
+    background-color: var(--color-primary);
+    color: #fff;
+
+    transition: all .3s;
+
   }
 
   &__photo {
@@ -484,6 +716,7 @@
   display: flex;
   align-items: center;
   border-bottom: var(--line);
+
   &__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -546,6 +779,7 @@
       font-size: 1.8rem;
     }
   }
+
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -785,16 +1019,14 @@
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
-  background-image: linear-gradient(
-    to right,
-    var(--color-primary-light),
-    var(--color-primary-dark)
-  );
+  background-image: linear-gradient(to right,
+      var(--color-primary-light),
+      var(--color-primary-dark));
   color: #fff;
   overflow: hidden;
   cursor: pointer;
 
-  & > * {
+  &>* {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -813,11 +1045,9 @@
   }
 
   &:hover {
-    background-image: linear-gradient(
-      to left,
-      var(--color-primary-light),
-      var(--color-primary-dark)
-    );
+    background-image: linear-gradient(to left,
+        var(--color-primary-light),
+        var(--color-primary-dark));
   }
 
   &:hover &__visible {
